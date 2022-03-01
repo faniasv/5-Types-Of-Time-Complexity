@@ -1,16 +1,12 @@
 # O(log n) example using recursion function to make fibonacci
-def recur_fibo(n):
-   if n <= 1:
-       return n
-   else:
-       return(recur_fibo(n-1) + recur_fibo(n-2))
+def fibo(n):
+    seq = [0,1]
 
-nterms = 10
+    for i in range(2,n+1):
+        next_num = seq[-1] + seq[-2]
+        seq.append(next_num)
+    return seq
 
-# to check if the number of terms is valid
-if nterms <= 0:
-   print("Plese enter a positive integer")
-else:
-   print("Fibonacci sequence:")
-   for i in range(nterms):
-       print(recur_fibo(i))
+seq = fibo(10)
+print(seq)
+print("Total = {0}".format(sum(seq)))
