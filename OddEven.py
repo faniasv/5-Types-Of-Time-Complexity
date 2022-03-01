@@ -2,6 +2,6 @@
 num = int (input("Enter a number: "))
 
 if(num % 2) == 0:
-    print(str(num), " is Even")
+    print("{0} is Even".format(num))
 else:
-    print(str(num), " is Odd")
+    print("{0} is Odd".format(num))
