@@ -4,7 +4,7 @@ num.sort()
 
 print(num)
 
-print("without built in function")
+print("without sort")
 new_num = []
 while num:
     min = num[0]  
